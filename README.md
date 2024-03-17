@@ -1,5 +1,5 @@
 # EX01 Developing a Simple Webserver
-## Date:10-03-2024
+## Date:16-03-2024
 
 ## AIM:
 To develop a simple webserver to serve html pages.
@@ -25,11 +25,42 @@ Testing the webserver.
 from http.server import HTTPServer,BaseHTTPRequestHandler
 content = """
 <html>
-<head>
-<title>MY webserver</title>
-</head>
-<h1>welcome</h1>
-</body>
+     <title> Image Map </title>
+     <body>
+          <table border = "2" cellspacing = "10" cellpading = "6">
+               <caption> Top five revenue generating software companies</caption>
+               <tr>
+                    <th>S.no</th>
+                    <th>Company</th>
+                    <th>Revenue</th>
+               </tr>
+               <tr>
+                    <td>1</td>
+                    <td>Microsoft</td>
+                    <td>65 Billion</td>
+               </tr>
+               <tr>
+                    <td>2</td>
+                    <td>Oracle</td>
+                    <td>29.6 Billion</td>
+               </tr>
+                <tr>
+                    <td>3</td>
+                    <td>IBM</td>
+                    <td> 29.1 Billion</td>
+               </tr>
+               <tr>
+                    <td>4</td>
+                    <td>SAP</td>
+                    <td>6.4 Billion</td>
+               </tr>
+               <tr>
+                    <td>5</td>
+                    <td>Syamtec</td>
+                    <td>5.6Billion</td>
+               </tr> 
+          </table>
+     </body>
 </html>
 """
 class myhandler(BaseHTTPRequestHandler):
@@ -43,14 +74,14 @@ server_address = ('',80)
 httpd = HTTPServer(server_address,myhandler)
 print("my webserver is running...")
 httpd.serve_forever()
+
 ```
 
 
 ## OUTPUT:
+![alt text](<Screenshot (7).png>)
+![alt text](<Screenshot (8).png>)
 
-![alt text](<Screenshot (4).png>)
-
-![alt text](<Screenshot 2024-03-10 193005.png>)
 
 ## RESULT:
 The program for implementing simple webserver is executed successfully.
